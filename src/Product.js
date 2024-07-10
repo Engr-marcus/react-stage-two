@@ -32,14 +32,11 @@ import search from "../src/images/search.svg";
 import heart1 from "../src/images/heart1.png";
 import heart2 from "../src/images/heart2.png";
 import React from "react";
-import { Navigate } from "react-router-dom";
 import Cart from "./Cart";
-import {Context} from "./App";
 import "./Product.css";
 
 
 function Product() {
-    const {goToCart, setGoToCart} = React.useState(Context); 
   return (
     <div>
       <section className="product">
@@ -145,9 +142,7 @@ function Product() {
                             <img src={star1} />
                             <img src={star2} />
                         </div>
-                        <button onClick={() => {
-                            setGoToCart(true);
-                        }} className="cartBtn">{" "}<a href="./Cart">Add to cart</a></button>
+                        <button className="cartBtn"><a href="./Cart">Add to cart</a></button>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
