@@ -1,9 +1,9 @@
-import Product from "./Product";
+import Order from "./Order";
 
 function App() {
   return (
     <div>
-      <Product />
+      <Order />
     </div>
   );
 }

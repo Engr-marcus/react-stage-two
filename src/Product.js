@@ -1,4 +1,4 @@
-import img1 from "../src/images/img1.png";
+
 import img3 from "../src/images/img3.png";
 import img4 from "../src/images/img4.png";
 import img5 from "../src/images/img5.png";
@@ -15,8 +15,6 @@ import img15 from "../src/images/img15.png";
 import img16 from "../src/images/img16.png";
 import img17 from "../src/images/img17.png";
 import menu from "../src/images/menu.png";
-import img18 from "../src/images/img18.png";
-import img19 from "../src/images/img19.png";
 import logo from "../src/images/logo.svg";
 import bg from "../src/images/bg.svg";
 import star1 from "../src/images/star1.svg";
@@ -86,7 +84,7 @@ function Product() {
             <p>Home and Kitchen</p>
           </div>
           <div className="sort">
-            <h4>Sort by</h4>
+            <h4>Sort by:</h4>
             <select>
                 <option className="option">Popularity</option>
             </select>
@@ -118,7 +116,7 @@ function Product() {
                 </ul>
                 <div className="priceItem">
                     <h2>$25,000-$200,000</h2>
-                    <input type="range" />
+                    <input className="range" type="range" min="0" max="100" step="1"  />
                 </div>
                 <ul className="available">
                     <div><input type="radio" checked /><span>In Stock</span></div>
@@ -150,8 +148,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart2} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Laptop devicce</p>    
+                        <h3>N 500,000</h3>
                         <div className="stars">
                             <img src={star2} />
                             <img src={star2} />
@@ -167,8 +165,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Black headhones digital device</p>    
+                        <h3>N 24,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -184,8 +182,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Gaming virtual reality headeset</p>    
+                        <h3>N 50,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -201,7 +199,7 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
+                        <p>Best quality AirCondition</p>    
                         <h3>N 200,000</h3>
                         <div className="stars">
                             <img src={star2} />
@@ -218,8 +216,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Blender</p>    
+                        <h3>N 24,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -235,8 +233,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart2} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Electric boiler</p>    
+                        <h3>N 60,000</h3>
                         <div className="stars">
                             <img src={star2} />
                             <img src={star2} />
@@ -252,8 +250,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Pair of men's black classic shoes</p>    
+                        <h3>N 24,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -269,8 +267,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Brown quality female bage</p>    
+                        <h3>N 35,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -286,8 +284,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Set of female cosmetic</p>    
+                        <h3>N 20,000</h3>
                         <div className="stars">
                             <img src={star2} />
                             <img src={star2} />
@@ -303,8 +301,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Female leader bag</p>    
+                        <h3>N 40,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -320,8 +318,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Colorful sport shoe</p>    
+                        <h3>N 24,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -337,8 +335,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Black Smart Watch</p>    
+                        <h3>N 60,000</h3>
                         <div className="stars">
                             <img src={star2} />
                             <img src={star2} />
@@ -354,8 +352,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Modern Desktop computer</p>    
+                        <h3>N 500,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />
@@ -371,8 +369,8 @@ function Product() {
                             <span>-20%</span>
                             <img className="heart" src={heart1} />
                         </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
+                        <p>Quality Photo camera</p>    
+                        <h3>N 28,000</h3>
                         <div className="stars">
                             <img src={star1} />
                             <img src={star1} />

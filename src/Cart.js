@@ -93,12 +93,12 @@ function Cart() {
                 <button>Save for later</button>
               </div>
             </div>
-            <div className="cardBox">
+            <div className="cardBox border">
               <div className="top">
                 <div className="left">
                   <img src={img11} />
                   <div className="txt">
-                    <h4>Gaming virtual reality headset</h4>
+                    <h4>Quality female bag</h4>
                     <p>In Stock</p>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ function Cart() {
             <div className="b-bottom b2"><span className="i3">Delivery charge </span><span className="i4">Add your delivery address to see your delivery charge</span></div>
             <div className="b-bottom b3"><span className="i5">Subtotal</span><span className="i6">N500,000</span></div>
             <p>Excluding delivery charge</p>
-            <div className="b-bottom b4"><span className="i7">Total</span><span className="i8">N500,00</span></div>
+            <div className="b-bottom b4"><span className="i7">Total</span><span className="i8">N500,000</span></div>
             <button className="b5">Continue checkout</button>
             <div className="pay b6">
                 <span>We accept</span>
