@@ -18,6 +18,25 @@ import React from "react";
 import "./Cart.css";
 
 function Cart() {
+  const [num, setnum] = React.useState(1);
+  const [num1, setnum1] = React.useState(1);
+
+  function add(){
+    setnum(num + 1)
+  }
+  function sub(){
+    if(num > 1){
+      setnum(num - 1)
+    }
+  }
+  function add1(){
+    setnum1(num1 + 1)
+  }
+  function sub1(){
+    if(num > 1){
+      setnum1(num1 - 1)
+    }
+  }
   return (
     <div>
       <section className="product">
@@ -82,9 +101,9 @@ function Cart() {
                         </div>
                     </div>
                     <div className="num">
-                        <span className="sub">➖</span>
-                        <p className="numItems">1</p>
-                        <span className="add">➕</span>
+                        <span className="sub" onClick={sub}>➖</span>
+                        <p className="numItems">{num}</p>
+                        <span className="add" onClick={add}>➕</span>
                     </div>
                 </div>
               </div>
@@ -111,9 +130,9 @@ function Cart() {
                         </div>
                     </div>
                     <div className="num">
-                        <span className="sub">➖</span>
-                        <p className="numItems">1</p>
-                        <span className="add">➕</span>
+                        <span className="sub" onClick={sub1}>➖</span>
+                        <p className="numItems">{num1}</p>
+                        <span className="add" onClick={add1}>➕</span>
                     </div>
                 </div>
               </div>
