@@ -15,6 +15,8 @@ import social2 from "../src/images/social2.svg";
 import social3 from "../src/images/social3.svg";
 import social4 from "../src/images/social4.svg";
 import React from "react";
+import { Link } from "react-router-dom";
+import Checkout from "./Checkout";
 import "./Cart.css";
 
 function Cart() {
@@ -78,7 +80,7 @@ function Cart() {
       <section className="cartContainer">
         <div className="cartTxt">
           <h1>Shopping cart</h1>
-          <a href="">Continue shopping</a>
+          <Link to="/Product" className="back">Continue shopping</Link>
         </div>
         <div className="mainCart">
           <div className="leftContainer">
@@ -148,7 +150,7 @@ function Cart() {
             <div className="b-bottom b3"><span className="i5">Subtotal</span><span className="i6">N500,000</span></div>
             <p>Excluding delivery charge</p>
             <div className="b-bottom b4"><span className="i7">Total</span><span className="i8">N500,000</span></div>
-            <button className="b5">Continue checkout</button>
+            <Link to="/Checkout"><button className="b5" >Continue checkout</button></Link>
             <div className="pay b6">
                 <span>We accept</span>
                 <img src={pay1} />

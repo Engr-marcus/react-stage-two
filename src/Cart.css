@@ -104,7 +104,7 @@ nav{
     color: #111313;
     line-height: 7.5rem;
   }
-  .cartTxt a{
+  .cartTxt .back{
     display: inline-block;
     margin-top: 3.5rem;
     font-size: 1.6rem;

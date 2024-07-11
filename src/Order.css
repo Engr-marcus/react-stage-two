@@ -130,6 +130,11 @@ nav .icons span img {
   font-size: 1.6rem;
   font-weight: 700;
 }
+.orderContainer .order button:hover{
+    background: transparent;
+    border: 1px solid #f17020;
+    color: #000;
+}
 .footer {
   width: 100%;
   background-color: #fff;

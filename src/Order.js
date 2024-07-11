@@ -1,5 +1,5 @@
 import logo from "../src/images/logo.svg";
-import img10 from "../src/images/img10.png";
+import thank from "../src/images/thanks.png";
 import menu from "../src/images/menu.png";
 import bg from "../src/images/bg.svg";
 import nav1 from "../src/images/help.svg";
@@ -11,6 +11,8 @@ import social2 from "../src/images/social2.svg";
 import social3 from "../src/images/social3.svg";
 import social4 from "../src/images/social4.svg";
 import React from "react";
+import { Link } from "react-router-dom";
+import Product from "./Product";
 import "./Order.css";
 
 function Order(){
@@ -55,10 +57,10 @@ function Order(){
       </section>
         <section className="orderContainer">
             <div className="order">
-                <img src={img10} />
+                <img src={thank} />
                 <h3>Thanks for your purchase!</h3>
                 <p>Your order has been successfully purchase</p>
-                <button>Back to product</button>
+                <Link to="/Product"><button>Back to product</button></Link>
             </div>
         </section>
 

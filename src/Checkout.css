@@ -276,6 +276,11 @@ nav .icons span img {
 .payContainer .pay{
     margin: 2rem 0 .6rem;
 }
+.payContainer .pay input[type="radio"]{
+    accent-color: #F17020;
+    height: 1.6rem;
+    width: 1.6rem;
+}
 .payContainer .pay span{
     margin-left: 1rem;
     font-size: 1.3rem;

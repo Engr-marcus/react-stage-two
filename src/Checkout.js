@@ -15,6 +15,8 @@ import social2 from "../src/images/social2.svg";
 import social3 from "../src/images/social3.svg";
 import social4 from "../src/images/social4.svg";
 import React from "react";
+import { Link } from "react-router-dom";
+import Order from "./Order";
 import "./Checkout.css";
 
 function Checkout() {
@@ -112,7 +114,7 @@ function Checkout() {
               <span className="i7">Total</span>
               <span className="i8">N500,000</span>
             </div>
-            <button className="b5">Confirm order</button>
+            <Link to="/Order"><button className="b5">Confirm order</button></Link>
             <div className="pay b6">
               <span>We accept</span>
               <img src={pay1} />

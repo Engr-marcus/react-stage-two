@@ -30,16 +30,13 @@ import search from "../src/images/search.svg";
 import heart1 from "../src/images/heart1.png";
 import heart2 from "../src/images/heart2.png";
 import React from "react";
+import { Link } from 'react-router-dom';
+import Cart  from "./Cart";
 import "./Product.css";
 
 
 function Product() {
 
-    const [isImportant, setIsImportant] = React.useState("Yes")
-
-    function addCart(){
-        setIsImportant("No")
-    }
   return (
     <div>
       <section className="product">
@@ -121,7 +118,7 @@ function Product() {
                 </ul>
                 <div className="priceItem">
                     <h2>$25,000-$200,000</h2>
-                    <input className="range" type="range" min="0" max="100" step="1"  />
+                    <input className="range" type="range" min="0" max="100" />
                 </div>
                 <ul className="available">
                     <div><input type="radio" checked /><span>In Stock</span></div>
@@ -145,7 +142,7 @@ function Product() {
                             <img src={star1} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn" onClick={addCart}><a href="./Cart">{isImportant}</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -162,7 +159,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -179,7 +176,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -196,7 +193,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -213,7 +210,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -230,7 +227,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -247,7 +244,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -264,7 +261,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -281,7 +278,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -298,7 +295,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -315,7 +312,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -332,7 +329,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -349,7 +346,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -366,7 +363,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                     <div className="card">
                         <div className="imgContainer">
@@ -383,7 +380,7 @@ function Product() {
                             <img src={star2} />
                             <img src={star2} />
                         </div>
-                        <button className="cartBtn"><a href="Cart.js">Add to cart</a></button>
+                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
                     </div>
                 </div>
             </div>
