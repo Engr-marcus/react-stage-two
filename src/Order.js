@@ -60,7 +60,7 @@ function Order(){
                 <img src={thank} />
                 <h3>Thanks for your purchase!</h3>
                 <p>Your order has been successfully purchase</p>
-                <Link to="/Product"><button>Back to product</button></Link>
+                <Link to="/"><button>Back to product</button></Link>
             </div>
         </section>
 

@@ -7,9 +7,9 @@ import Order from "./Order";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+    <Routes>
+        <Route index element={<Product />} />
         <Route path="/" element={<Product />} />
-        <Route path="Product" element={<Product />} />
         <Route path="Cart" element={<Cart/>} />
         <Route path="Checkout" element={<Checkout/>} />
         <Route path="Order" element={<Order/>} />
