@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Roboto;
+}
+ .card {
+  padding: 1rem 1rem 1.6rem 1rem;
+  border: 0.1rem solid #003d28;
+  margin: 0.8rem;
+}
+.card .imgContainer {
+  background-color: #f7f7f7f7;
+  position: relative;
+}
+.imgContainer img {
+  filter: blur(0.2rem);
+  max-width: 30rem;
+  max-height: 100%;
+  transition: 0.5s;
+}
+.cardsContainer .card .imgContainer img:hover {
+  filter: blur(0);
+}
+.card .imgContainer span {
+  background-color: #003d28;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 14px;
+  left: 0.8rem;
+}
+.card .imgContainer .heart {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1.6rem;
+  left: 24.4rem;
+}
+.card p {
+  margin-top: 1.2rem;
+  text-align: left;
+  color: #111313;
+  font-weight: 400;
+  line-height: 2.8rem;
+  font-size: 1.8rem;
+}
+.card p:hover {
+  color: #f17020;
+}
+.card h3 {
+  color: #111313;
+  font-weight: 700;
+  line-height: 4.2rem;
+  font-size: 2.8rem;
+}
+.card .cartBtn {
+  color: #000;
+  width: 100%;
+  height: 4.8rem;
+  border: 0.1rem solid #f17020;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  background-color: transparent;
+  margin-top: 1.8rem;
+  cursor: pointer;
+}
+.card .cartBtn:hover {
+  color: #fff;
+  background-color: #f17020;
+}

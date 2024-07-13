@@ -138,6 +138,8 @@ nav .icons span img {
 .footer {
   width: 100%;
   background-color: #fff;
+  margin-top: 10rem;
+  border-top: .1rem solid #666666;
 }
 .footer .topFooter {
   padding: 11.6rem 2rem;
@@ -266,6 +268,7 @@ p {
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
+    width: 80%;
   }
   .menu {
     cursor: pointer;

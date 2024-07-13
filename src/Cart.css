@@ -16,6 +16,14 @@ body{
     background: #F2F2F2;
     width: 100%;
 }
+.textCenter{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
 .product{
     background: #003D28;
     height: 24.6rem;
@@ -88,7 +96,7 @@ nav{
     font-weight: 500;
     color: #FFF;
   }
-  nav .icons span:hover{
+  nav .icons:hover span{
     color: #F17020;
   }
   nav .icons span img{
@@ -134,14 +142,31 @@ nav{
     display: flex;
     flex-direction: column;
 }
-.leftContainer:last-child{
-    border: none;
-    background-color: #003D28;
+.leftContainer .topCart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.leftContainer h4{
+
+.leftContainer .topCart h4{
     font-size: 2.8rem;
     font-weight: 400;
 }
+.leftContainer .topCart button{
+        color: #003D28;
+        border-radius: .8rem;
+        padding: 1rem;
+        background-color: transparent;
+        border: .1rem solid #77919B;
+        font-size: 1.6rem;
+        font-weight: 400;
+    
+}
+.leftContainer .topCart  button:hover{
+    background-color: #003D28;
+    color: #FFF;
+}
+
 .leftContainer .cardBox{
     display: flex;
     flex-direction: column;
@@ -361,6 +386,8 @@ nav{
 .footer{
     width: 100%;
     background-color: #FFF;
+    margin-top: 10rem;
+    border-top: .1rem solid #666666;
 }
 .footer .topFooter{
     padding: 11.6rem 2rem;
@@ -469,6 +496,7 @@ nav{
         height: 27.6rem;
     }
     nav .searchContainer{
+        width: 80%;
       position: absolute;
       top: 70%; left: 50%;
       transform: translateX(-50%);

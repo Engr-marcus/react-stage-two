@@ -1,24 +1,6 @@
-
-import img3 from "../src/images/img3.png";
-import img4 from "../src/images/img4.png";
-import img5 from "../src/images/img5.png";
-import img6 from "../src/images/img6.png";
-import img7 from "../src/images/img7.png";
-import img8 from "../src/images/img8.png";
-import img9 from "../src/images/img9.png";
-import img10 from "../src/images/img10.png";
-import img11 from "../src/images/img11.png";
-import img12 from "../src/images/img12.png";
-import img13 from "../src/images/img13.png";
-import img14 from "../src/images/img14.png";
-import img15 from "../src/images/img15.png";
-import img16 from "../src/images/img16.png";
-import img17 from "../src/images/img17.png";
 import menu from "../src/images/menu.png";
 import logo from "../src/images/logo.svg";
 import bg from "../src/images/bg.svg";
-import star1 from "../src/images/star1.svg";
-import star2 from "../src/images/star2.svg";
 import social1 from "../src/images/social1.svg";
 import social2 from "../src/images/social2.svg";
 import social3 from "../src/images/social3.svg";
@@ -27,18 +9,25 @@ import nav1 from "../src/images/help.svg";
 import nav2 from "../src/images/profile.svg";
 import nav3 from "../src/images/shopping-cart.svg";
 import search from "../src/images/search.svg";
-import heart1 from "../src/images/heart1.png";
-import heart2 from "../src/images/heart2.png";
 import React from "react";
-import { Link } from 'react-router-dom';
-import Cart  from "./Cart";
+import { Link } from "react-router-dom";
 import "./Product.css";
+import { Home } from "./Home";
+import { useCart } from "react-use-cart";
 
-
-function Product() {
-
+const Product = () => {
+    const { 
+        isEmpty,
+        totalUniqueItems,
+        items, 
+        totalItems,
+        cartTotal,
+        updateItemQuantity,
+        removeItem,
+        emptyCart,
+    } = useCart();
   return (
-    <div>
+    <>
       <section className="product">
         <nav>
           <div className="logo">
@@ -56,25 +45,30 @@ function Product() {
             </span>
           </div>
           <div className="icons">
-            <span className="hide">
+            <div className="hide topLeft">
               <img src={nav1} />
-              Help
-            </span>
-            <span className="hide">
+              <span>Help</span>
+            </div>
+            <div className="hide topLeft">
               <img src={nav2} />
-              Account
-            </span>
-            <span>
-              <img src={nav3} />
+              <span>Account</span>
+            </div>
+            <div className="topLeft">
+              <Link to="/Cart" className="cart">
+                <img className="cartIcon" src={nav3} />
+                <p className="cartNum">{totalUniqueItems}</p>
+              </Link>
               <span className="hide">Cart</span>
-            </span>
-            <span className="menu">
-                <img className="hidden" src={menu} />
-            </span>
+            </div>
+            <div className="menu">
+              <img className="hidden" src={menu} />
+            </div>
           </div>
         </nav>
         <img className="bg" src={bg} />
-        <h1 className="hide">Product Listing</h1>
+        <Link to="/Cart" className="cart">
+        <h1 className="hide">Go to Cart</h1>
+        </Link>
       </section>
       <section className="categoryContainer">
         <div className="categoryBox hide">
@@ -88,365 +82,120 @@ function Product() {
           <div className="sort">
             <h4>Sort by:</h4>
             <select>
-                <option className="option">Popularity</option>
+              <option className="option">Popularity</option>
             </select>
             <select>
-                <option className="option">Price</option>
+              <option className="option">Price</option>
             </select>
           </div>
         </div>
         <div className="filsort hidden">
-            <div className="filter">
-                <img src="star1" alt="filter-icon" />
-                <span>Filter</span>
-            </div>
-            <div className="sort">
-                <img src="star1" alt="sort-icon" />
-                <span>Sort</span>
-            </div>
-
+          <div className="filter">
+            <img src="star1" alt="filter-icon" />
+            <span>Filter</span>
+          </div>
+          <div className="sort">
+            <img src="star1" alt="sort-icon" />
+            <span>Sort</span>
+          </div>
         </div>
         <div className="mainCategory">
-            <div className="leftContainer hide">
-                <ul className="categoryItems">
-                    <li>Computer and accessories</li>
-                    <li>Phone and Tablet</li>
-                    <li>Electronic</li>
-                    <li>Home and Kitchen</li>
-                    <li>Fashion Wears</li>
-                    <li>Other category</li>
-                </ul>
-                <div className="priceItem">
-                    <h2>$25,000-$200,000</h2>
-                    <input className="range" type="range" min="0" max="100" />
-                </div>
-                <ul className="available">
-                    <div><input type="radio" checked /><span>In Stock</span></div>
-                    <div><input type="radio" /><span>Out of Stock</span></div>
-                </ul>
+          <div className="leftContainer hide">
+            <ul className="categoryItems">
+              <li>Computer and accessories</li>
+              <li>Phone and Tablet</li>
+              <li>Electronic</li>
+              <li>Home and Kitchen</li>
+              <li>Fashion Wears</li>
+              <li>Other category</li>
+            </ul>
+            <div className="priceItem">
+              <h2>$25,000-$200,000</h2>
+              <input className="range" type="range" min="0" max="100" />
             </div>
-            <div className="rightContainer">
-                <div className="cardsContainer">
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img3} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>iPhone 15 pro max</p>    
-                        <h3>N 200,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img4} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart2} />
-                        </div>
-                        <p>Laptop devicce</p>    
-                        <h3>N 500,000</h3>
-                        <div className="stars">
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img5} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Black headhones digital device</p>    
-                        <h3>N 24,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img6} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Gaming virtual reality headeset</p>    
-                        <h3>N 50,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img7} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Best quality AirCondition</p>    
-                        <h3>N 200,000</h3>
-                        <div className="stars">
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img8} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Blender</p>    
-                        <h3>N 24,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img9} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart2} />
-                        </div>
-                        <p>Electric boiler</p>    
-                        <h3>N 60,000</h3>
-                        <div className="stars">
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img10} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Pair of men's black classic shoes</p>    
-                        <h3>N 24,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img11} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Brown quality female bage</p>    
-                        <h3>N 35,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img12} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Set of female cosmetic</p>    
-                        <h3>N 20,000</h3>
-                        <div className="stars">
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img13} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Female leader bag</p>    
-                        <h3>N 40,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img14} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Colorful sport shoe</p>    
-                        <h3>N 24,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img15} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Black Smart Watch</p>    
-                        <h3>N 60,000</h3>
-                        <div className="stars">
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img16} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Modern Desktop computer</p>    
-                        <h3>N 500,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                    <div className="card">
-                        <div className="imgContainer">
-                            <img src={img17} />
-                            <span>-20%</span>
-                            <img className="heart" src={heart1} />
-                        </div>
-                        <p>Quality Photo camera</p>    
-                        <h3>N 28,000</h3>
-                        <div className="stars">
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star1} />
-                            <img src={star2} />
-                            <img src={star2} />
-                        </div>
-                        <Link to="/Cart"><button className="cartBtn">Add to cart</button></Link>
-                    </div>
-                </div>
+            <ul className="available">
+              <div>
+                <input type="radio" checked />
+                <span>In Stock</span>
+              </div>
+              <div>
+                <input type="radio" />
+                <span>Out of Stock</span>
+              </div>
+            </ul>
+          </div>
+          <div className="rightContainer">
+            <div className="cardsContainer">
+              <Home />
             </div>
+          </div>
         </div>
       </section>
       <section className="newsletter">
         <div className="newsContainer">
-            <h4>Subscribe to our newsletter</h4>
-            <p>Subscribe to our newsletter to get update  on our latest and exciting offers on all our products</p>
-            <input type="email" />
-            <button className="btn">Subscribe</button>
+          <h4>Subscribe to our newsletter</h4>
+          <p>
+            Subscribe to our newsletter to get update on our latest and exciting
+            offers on all our products
+          </p>
+          <input type="email" />
+          <button className="btn">Subscribe</button>
         </div>
       </section>
       <section className="footer">
         <div className="topFooter">
-            <div className="brandName">
-            <img src={logo} />TrustBuy
+          <div className="brandName">
+            <img src={logo} />
+            TrustBuy
+          </div>
+          <div className="about">
+            <h3>About</h3>
+            <p>Our Product</p>
+            <p>Our Story</p>
+            <p>Our Blog</p>
+          </div>
+          <div className="info">
+            <h3>Information</h3>
+            <p>Delivery Information</p>
+            <p>Privacy policy</p>
+            <p>Return</p>
+            <p>Terms & conditions</p>
+          </div>
+          <div className="support">
+            <h3>Support</h3>
+            <p>Contact Us</p>
+            <p>Help</p>
+            <p>FAQ</p>
+            <p>Checkout</p>
+          </div>
+          <div className="connect">
+            <h3>Connect</h3>
+            <div className="icons">
+              <div className="icon">
+                <img src={social1} />
+              </div>
+              <div className="icon">
+                <img src={social2} />
+              </div>
+              <div className="icon">
+                <img src={social3} />
+              </div>
+              <div className="icon">
+                <img src={social4} />
+              </div>
             </div>
-            <div className="about">
-                <h3>About</h3>
-                <p>Our Product</p>
-                <p>Our Story</p>
-                <p>Our Blog</p>
-            </div>
-            <div className="info">
-                <h3>Information</h3>
-                <p>Delivery Information</p>
-                <p>Privacy policy</p>
-                <p>Return</p>
-                <p>Terms & conditions</p>
-            </div>
-            <div className="support">
-                <h3>Support</h3>
-                <p>Contact Us</p>
-                <p>Help</p>
-                <p>FAQ</p>
-                <p>Checkout</p>
-            </div>
-            <div className="connect">
-                <h3>Connect</h3>
-                <div className="icons">
-                    <div className="icon">
-                        <img src={social1} />
-                    </div>
-                    <div className="icon">
-                        <img src={social2} />
-                    </div>
-                    <div className="icon">
-                        <img src={social3} />
-                    </div>
-                    <div className="icon">
-                        <img src={social4} />
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
         <div className="bottomFooter">
-            <div>
-                <p>Privacy Policy</p>
-                <p>Terms of Use</p>     
-            </div>
-            <p>2024, Powered by TrustBuy. All Right Reserved.</p>
+          <div>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+          </div>
+          <p>2024, Powered by TrustBuy. All Right Reserved.</p>
         </div>
       </section>
-    </div>
+    </>
   );
-}
+};
 
 export default Product;

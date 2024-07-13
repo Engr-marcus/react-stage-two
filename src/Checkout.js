@@ -66,29 +66,29 @@ function Checkout() {
             <div className="flex">
               <div className="column">
                 <label>Firstname</label>
-                <input type="text" placeholder="Enter first name" />
+                <input type="text" placeholder="Enter first name" required/>
               </div>
               <div className="column">
                 <label>Lastname</label>
-                <input type="text" placeholder="Enter last name" />
+                <input type="text" placeholder="Enter last name" required />
               </div>
             </div>
             <div className="flex">
               <div className="column">
                 <label>Phone no</label>
-                <input type="text" placeholder="Enter phone no" />
+                <input type="text" placeholder="Enter phone no" required />
               </div>
               <div className="column">
                 <label>Additional Phone no</label>
-                <input type="text" placeholder="Enter phone no" />
+                <input type="text" placeholder="Enter phone no" required />
               </div>
             </div>
             <label>Address</label>
-            <input type="text" placeholder="Enter address" />
+            <input type="text" placeholder="Enter address" required />
             <label>Address Information</label>
-            <input type="text" placeholder="Enter information" />
+            <input type="text" placeholder="Enter information" required />
             <label>City</label>
-            <input type="text" placeholder="Enter city" />
+            <input type="text" placeholder="Enter city" required />
             <div className="buttons">
               <button className="odd">Cancel</button>
               <button className="real">Save</button>

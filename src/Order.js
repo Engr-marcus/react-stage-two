@@ -38,14 +38,15 @@ function Order(){
           <div className="icons">
             <span className="hide">
               <img src={nav1} />
-              Help
+              <span>Help</span>
             </span>
             <span className="hide">
               <img src={nav2} />
-              Account
+              <span>Account</span>
             </span>
             <span>
-              <img src={nav3} />
+              <img className="cartIcon" src={nav3} />
+              <small className="cartNum"></small>
               <span className="hide">Cart</span>
             </span>
             <span className="menu">
